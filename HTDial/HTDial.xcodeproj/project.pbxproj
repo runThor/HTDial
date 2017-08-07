@@ -62,6 +62,7 @@
 				F7C5487E1F385DAE00884107 /* AppDelegate.m */,
 				F7C548801F385DAE00884107 /* ViewController.h */,
 				F7C548811F385DAE00884107 /* ViewController.m */,
+				F7C548921F38691A00884107 /* HTDial */,
 				F7C548831F385DAE00884107 /* Main.storyboard */,
 				F7C548861F385DAF00884107 /* Assets.xcassets */,
 				F7C548881F385DAF00884107 /* LaunchScreen.storyboard */,
@@ -77,6 +78,13 @@
 				F7C5487B1F385DAE00884107 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7C548921F38691A00884107 /* HTDial */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HTDial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +319,7 @@
 				F7C548901F385DAF00884107 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
