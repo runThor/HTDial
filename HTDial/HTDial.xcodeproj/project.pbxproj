@@ -13,6 +13,7 @@
 		F7C548851F385DAE00884107 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C548831F385DAE00884107 /* Main.storyboard */; };
 		F7C548871F385DAF00884107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C548861F385DAF00884107 /* Assets.xcassets */; };
 		F7C5488A1F385DAF00884107 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C548881F385DAF00884107 /* LaunchScreen.storyboard */; };
+		F7FA8CA21F395D690010B8DB /* HTDialView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7FA8CA11F395D690010B8DB /* HTDialView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		F7C548861F385DAF00884107 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7C548891F385DAF00884107 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7C5488B1F385DAF00884107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7FA8CA01F395D690010B8DB /* HTDialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTDialView.h; sourceTree = "<group>"; };
+		F7FA8CA11F395D690010B8DB /* HTDialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTDialView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 		F7C548921F38691A00884107 /* HTDial */ = {
 			isa = PBXGroup;
 			children = (
+				F7FA8CA01F395D690010B8DB /* HTDialView.h */,
+				F7FA8CA11F395D690010B8DB /* HTDialView.m */,
 			);
 			path = HTDial;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FA8CA21F395D690010B8DB /* HTDialView.m in Sources */,
 				F7C548821F385DAE00884107 /* ViewController.m in Sources */,
 				F7C5487F1F385DAE00884107 /* AppDelegate.m in Sources */,
 				F7C5487C1F385DAE00884107 /* main.m in Sources */,
