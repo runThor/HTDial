@@ -10,12 +10,12 @@
 
 @interface HTDialView : UIView
 
-@property (nonatomic, assign) CGFloat minValue;  // 最小值
-@property (nonatomic, assign) CGFloat maxValue;  // 最大值
-@property (nonatomic, assign) CGFloat firstSeparationValue;  // 第一个分界点的值
-@property (nonatomic, assign) CGFloat secondSeparationValue;  // 第二个分界点的值
+@property (nonatomic, assign) CGFloat minValue;
+@property (nonatomic, assign) CGFloat maxValue;
+@property (nonatomic, assign) CGFloat firstSeparationValue;
+@property (nonatomic, assign) CGFloat secondSeparationValue;
 
-// 指针指向某个值
+// Point to a value
 - (void)pointValue:(CGFloat)value;
 
 @end

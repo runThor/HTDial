@@ -10,7 +10,7 @@
 
 @interface HTDialView ()
 
-@property (nonatomic, strong) UIView *pointerView;  // 指针
+@property (nonatomic, strong) UIView *pointerView;
 
 @end
 
@@ -36,12 +36,12 @@
 
 - (void)configViews {
     
-    // 表盘边框
+    // Dial image
     UIImageView *dialBgImgView = [[UIImageView alloc] initWithFrame:self.bounds];
     dialBgImgView.image = [UIImage imageNamed:@"dial_bg"];
     [self addSubview:dialBgImgView];
     
-    // 初始化指针
+    // Pointer init
     self.pointerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 3, 80)];
     [self.pointerView setCenter:dialBgImgView.center];
     self.pointerView.backgroundColor = [UIColor yellowColor];
@@ -53,7 +53,7 @@
     
 }
 
-// 以不同颜色划分区域
+// Draw areas in different colors
 - (void)drawAreas {
     
     if (self.minValue == self.maxValue) {
@@ -67,7 +67,7 @@
     CGPoint center = CGPointMake(viewSize.width/2, viewSize.height/2);
     CGFloat radius = viewSize.width/2;
     
-    // 绘制lowArea
+    // Draw low area
     CGFloat lowAreaAngle = (self.firstSeparationValue - self.minValue)/(self.maxValue - self.minValue) * (1.5 * M_PI);
     
     CGContextBeginPath(contextRef);
@@ -76,7 +76,7 @@
     CGContextSetFillColorWithColor(contextRef, [UIColor colorWithRed:0/255.0 green:102.0/255.0 blue:255.0/255.0 alpha:1.0].CGColor);
     CGContextFillPath(contextRef);
     
-    // 绘制middleArea
+    // Draw middle area
     CGFloat middleAreaAngle = (self.secondSeparationValue - self.firstSeparationValue)/(self.maxValue - self.minValue) * (1.5 * M_PI);
     
     CGContextBeginPath(contextRef);
@@ -85,14 +85,14 @@
     CGContextSetFillColorWithColor(contextRef, [UIColor colorWithRed:13/255.0 green:142/255.0 blue:0/255.0 alpha:1.0].CGColor);
     CGContextFillPath(contextRef);
     
-    // 绘制highArea
+    // Draw high area
     CGContextBeginPath(contextRef);
     CGContextMoveToPoint(contextRef, center.x, center.y);
     CGContextAddArc(contextRef, center.x, center.y, radius, M_PI_2 + lowAreaAngle + middleAreaAngle, M_PI * 2, 0);
     CGContextSetFillColorWithColor(contextRef, [UIColor colorWithRed:250/255.0 green:47/255.0 blue:47/255.0 alpha:1.0].CGColor);
     CGContextFillPath(contextRef);
     
-    // 绘制遮罩圆
+    // Draw mask round
     CGContextBeginPath(contextRef);
     CGContextMoveToPoint(contextRef, center.x, center.y);
     CGContextAddArc(contextRef, center.x, center.y, radius * 0.8, 0, M_PI * 2, 0);
@@ -101,7 +101,7 @@
     
 }
 
-// 指针指向某个值
+// Point to a value
 - (void)pointValue:(CGFloat)value {
     
     if (self.minValue == self.maxValue || value < self.minValue || value > self.maxValue) {
@@ -116,13 +116,13 @@
         
         if (angle > M_PI) {
             
-            // 旋转角度大于180°的情况，分两段旋转
+            // angle > 180°, rotate in two steps
             self.pointerView.transform = CGAffineTransformMakeRotation(M_PI);
             self.pointerView.transform = CGAffineTransformMakeRotation(angle);
             
         } else {
             
-            // 旋转角度不大于180°的情况，一次旋转到位
+            // angle <= 180°, rotate once
             self.pointerView.transform = CGAffineTransformMakeRotation(angle);
             
         }
